@@ -1,0 +1,22 @@
+# docker compose docs: https://docs.docker.com/compose/compose-file/compose-file-v3/
+# docker compose env: https://docs.docker.com/compose/environment-variables/
+version: '1.0'
+name: server
+services:
+  server:
+    container_name: server_container
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    environment:
+      NODE_ENV: ${NODE_ENV}
+      NODE_PORT: ${NODE_PORT}
+    ports:
+      - '3000:3000'
+    volumes:
+      - ./src:/src
+    restart: always
+
+networks:
+  default:
+    name: sample-net
