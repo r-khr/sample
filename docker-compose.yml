@@ -9,8 +9,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     environment:
-      NODE_ENV: ${NODE_ENV}
-      NODE_PORT: ${NODE_PORT}
+      NODE_PORT: 3000
     ports:
       - '3000:3000'
     volumes:

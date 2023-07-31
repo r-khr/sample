@@ -1,3 +1,2 @@
 node_modules/
-# TODO: remove ignorting migrations when app is live
-prisma/migrations/*
+.DS_Store
